@@ -41,7 +41,7 @@ function App() {
 
       <div>
         <button onClick={handleClick}>
-          <img src="./icon-dice " alt="" />
+          <img src="./dice.png" alt="" />
         </button>
       </div>
     </div>
