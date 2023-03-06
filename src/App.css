@@ -17,9 +17,7 @@ img {
   max-width: 100%;
 }
 
-button {
-  user-select: none;
-}
+
 
 body {
   background-color: var(--dark-grayish-blue);
@@ -95,7 +93,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 2rem;
+  bottom: -2rem;
   cursor: pointer;
   transition: background-color 0.6ps ease-in-out;
 }
@@ -104,6 +102,20 @@ body {
   background-color: var(--neon-green);
   box-shadow: rgba(244, 242, 242, 0.25) 0px 54px 55px, rgba(251, 249, 249, 0.919) 0px -12px 30px, rgba(246, 244, 244, 0.957) 0px 4px 6px, rgba(249, 247, 247, 0.999) 0px 12px 13px, rgba(244, 239, 239, 0.962) 0px -3px 5px;
  transition: 500ms;
+}
+.searchButton-container{
+margin: auto;
+  background-color: var(--neon-green);
+  z-index: 999;
+  align-items: center;
+}
+.searchButton {
+  /* user-select: none; */
+  width: 2em;
+  height: 2em;
+  margin-left: -22;
+  background-color: aquamarine;
+  
 }
 
 @media (min-width: 500px) {
