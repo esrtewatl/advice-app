@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 0.1px);
+
   text-align: center;
 }
 
@@ -54,6 +54,7 @@ body {
   color: var(--light-cyan);
   line-height: 1.5;
   padding-bottom: 2rem;
+  font-family: 'Manrope', sans-serif
 }
 
 .container picture img {
@@ -78,6 +79,7 @@ body {
   width: 45%;
   height: 1px;
   background-color: var(--light-cyan);
+  color: #ffffff;
   left: 0;
   bottom: 0.74rem;
   position: relative;
@@ -85,7 +87,8 @@ body {
 }
 
 .container button {
-  background-color: var(--neon-green);
+ 
+  background-color: hsl(150, 59%, 54%);
   padding: 1.25rem;
   border: none;
   border-radius: 50%;
@@ -98,7 +101,9 @@ body {
 }
 
 .container button:hover {
-  background-color: hsl(150, 59%, 54%);
+  background-color: var(--neon-green);
+  box-shadow: rgba(244, 242, 242, 0.25) 0px 54px 55px, rgba(251, 249, 249, 0.919) 0px -12px 30px, rgba(246, 244, 244, 0.957) 0px 4px 6px, rgba(249, 247, 247, 0.999) 0px 12px 13px, rgba(244, 239, 239, 0.962) 0px -3px 5px;
+ transition: 500ms;
 }
 
 @media (min-width: 500px) {
