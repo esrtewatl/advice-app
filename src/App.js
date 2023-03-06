@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./App.css"
 
-function App() {
+function useDadJoke() {
   const [text, setText] = useState({ id: "", advice: "" });
 
   const fetchAdvice = async () => {
@@ -19,6 +19,16 @@ function App() {
     fetchAdvice();
   }, []);
 
+  const handleClick = () => {
+    fetchAdvice();
+  };
+
+  return { text, handleClick };
+}
+
+function App() {
+  const { text, handleClick } = useDadJoke();
+
   return (
     <div className="container">
       <h1>Dad Joke #{text.id}</h1>
@@ -30,8 +40,8 @@ function App() {
       </picture>
 
       <div>
-        <button onClick={fetchAdvice}>
-          <img src="./dice-icon" alt="" />
+        <button onClick={handleClick}>
+          <img src="./icon-dice " alt="" />
         </button>
       </div>
     </div>
