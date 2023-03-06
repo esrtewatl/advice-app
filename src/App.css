@@ -95,9 +95,9 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -2rem;
+  bottom: 2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.6ps ease-in-out;
 }
 
 .container button:hover {
