@@ -109,12 +109,25 @@ margin: auto;
   z-index: 999;
   align-items: center;
 }
+.searchBar-container{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin: 2em;
+}
 #search{
   width:16em;
   height: 2em;
   border: none !important;
   border-radius: .2em !important;
   margin-bottom: 1em !important;
+}
+#searchSubmit{
+  width: 4em;
+  height: 2em;  
+  margin: 1em;
+  margin-bottom: -.7em;
+
 }
 .searchButton {
   /* user-select: none; */
