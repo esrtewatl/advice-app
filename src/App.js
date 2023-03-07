@@ -30,35 +30,53 @@ function useDadJoke() {
     fetchRandomDadJoke();
   }, []);
 
-  const handleClick = () => {
-    const query = document.getElementById("search").value;
+  const handleSearch = (query) => {
     fetchDadJoke(query);
   };
 
-  return { text, handleClick, fetchRandomDadJoke };
+  return { text, handleSearch, fetchRandomDadJoke };
 }
 
 function App() {
-  const { text, handleClick, fetchRandomDadJoke } = useDadJoke();
+  const [searchTerm, setSearchTerm] = useState("");
+  const { text, handleSearch, fetchRandomDadJoke } = useDadJoke();
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    handleSearch(searchTerm);
+  };
+
+  const handleButtonClick = (query) => {
+    handleSearch(query);
+  };
 
   return (
     <div>
       <div className="SearchBar-container">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search Jokes"
-          className="searchBar"
-        />
-        <button id="searchSubmit" onClick={handleClick}>
-          Enter
-        </button>
+        <form onSubmit={handleFormSubmit}>
+          <input
+            type="text"
+            placeholder="Search Jokes"
+            className="searchBar"
+            value={searchTerm}
+            onChange={handleInputChange}
+          />
+          <button id="searchSubmit" type="submit">
+            Enter
+          </button>
+        </form>
       </div>
       <div className="searchButton-container">
-        <button className="searchButton"></button>
-        <button className="searchButton"></button>
-        <button className="searchButton"></button>
-        <button className="searchButton"></button>
+        <button className="searchButton1" onClick={() => handleButtonClick("bike")}>
+          Bike
+        </button>
+        <button className="searchButton2" onClick={() => handleButtonClick("fat")}>
+          Fat
+        </button>
       </div>
       <div className="container">
         <h1>Dad Joke #{text.id}</h1>

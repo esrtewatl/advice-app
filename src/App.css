@@ -115,7 +115,7 @@ flex-direction: column;
 justify-content: space-between;
 margin: 2em;
 }
-#search{
+.searchBar{
   width:16em;
   height: 2em;
   border: none !important;
@@ -129,7 +129,7 @@ margin: 2em;
   margin-bottom: -.7em;
 
 }
-.searchButton {
+.searchButton2, .searchButton1 {
   /* user-select: none; */
   width: 5em;
   height: 4em;
@@ -138,8 +138,14 @@ margin: 2em;
   background-color: aquamarine;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.searchButton:hover{
-color: var(--neon-green);
+.searchButton2:hover{
+color: black;
+cursor: pointer;
+box-shadow: rgba(244, 242, 242, 0.25) 0px 54px 55px, rgba(251, 249, 249, 0.919) 0px -12px 30px, rgba(246, 244, 244, 0.957) 0px 4px 6px, rgba(249, 247, 247, 0.999) 0px 12px 13px, rgba(244, 239, 239, 0.962) 0px -3px 5px;
+ transition: 500ms;
+}
+.searchButton1:hover{
+  color:black;
 cursor: pointer;
 box-shadow: rgba(244, 242, 242, 0.25) 0px 54px 55px, rgba(251, 249, 249, 0.919) 0px -12px 30px, rgba(246, 244, 244, 0.957) 0px 4px 6px, rgba(249, 247, 247, 0.999) 0px 12px 13px, rgba(244, 239, 239, 0.962) 0px -3px 5px;
  transition: 500ms;
